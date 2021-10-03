@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/signIn?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 25
+      idle-timeout: 60000
+      max-lifetime: 120000
+      connection-timeout: 30000
+      pool-name: sign
+
+logging:
+  level:
+    com.djg.signin.mapper: debug
